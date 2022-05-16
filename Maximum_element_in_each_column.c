@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+    int i=0,j,m,n,arr[100][100],res[1000],max=0;
+    scanf("%d%d",&m,&n);
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            scanf("%d",&arr[i][j]);
+        }
+    }
+    max=0;
+    i=0;
+    while(i<n)
+    {
+        for(j=0;j<m;j++)
+        {
+            if(arr[j][i]>max)
+            {
+                max=arr[j][i];
+            }
+        }
+        res[i]=max;
+        max=0;
+        i++;
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%d
+",res[i]);
+    }
+}
