@@ -11,7 +11,6 @@ int main()
     {
         if(arr[i]%2==0)
         {
-            c=1;
             printf("%d",i);
             break;
         }
